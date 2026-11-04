@@ -162,6 +162,27 @@
   .channel small{display:block;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
   .channel strong{font-weight:600;font-size:15px;overflow-wrap:anywhere}
 
+  /* Trayectoria */
+  .gallery{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+  .shot{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .shot:hover img{transform:scale(1.04)}
+  .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 24px 20px;background:linear-gradient(180deg,transparent,rgba(5,7,13,.92));font-size:14px;color:#cfd8ee}
+  .shot figcaption b{display:block;font:600 18px "Space Grotesk";color:var(--text);margin-bottom:2px}
+  .shot .chip{position:absolute;top:18px;left:18px}
+  .topics{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .topics span{font-size:13px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(16,24,44,.45);color:#cfd8ee}
+
+  /* Banner ESDM */
+  .brand{border-radius:28px;overflow:hidden;border:1px solid rgba(47,123,255,.35);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  .brand img{width:100%}
+
+  /* Redes */
+  .socials{display:flex;gap:12px;margin-top:28px}
+  .social{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(16,24,44,.45);color:var(--muted);transition:.25s}
+  .social:hover{color:#fff;border-color:rgba(63,208,255,.5);background:rgba(47,123,255,.18);transform:translateY(-3px)}
+  .social svg{width:20px;height:20px}
+
   footer{padding:48px 0;border-top:1px solid var(--line);margin-top:120px;color:var(--muted);font-size:13px}
   .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
@@ -173,6 +194,7 @@
     .hero-grid,.team,.contact-grid{grid-template-columns:1fr}
     .portrait{max-width:440px}
     .float-card{left:auto;right:-8px;top:-20px}
+    .gallery{grid-template-columns:1fr}
     .services{grid-template-columns:1fr 1fr}
     .svc,.svc:nth-child(4),.svc:nth-child(5){grid-column:span 1}
     .svc:nth-child(5){grid-column:span 2}
@@ -207,6 +229,7 @@
     <div class="links">
       <a href="#servicios">Servicios</a>
       <a href="#equipo">Equipo</a>
+      <a href="#trayectoria">Trayectoria</a>
       <a href="#metodo">Método</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -224,6 +247,13 @@
       <div class="cta-row reveal">
         <a href="#contacto" class="btn btn-p">Hablemos de lo que sigue →</a>
         <a href="#servicios" class="btn btn-g">Ver servicios</a>
+      </div>
+      <div class="socials reveal">
+        <a class="social" href="https://www.linkedin.com/in/edgar-roberto-rueda-salgado-7658861b0/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+        <a class="social" href="https://www.facebook.com/profile.php?id=61566175991231" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+        <a class="social" href="https://www.instagram.com/consultoredgarueda/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a class="social" href="https://wa.me/525646044792" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.3 3.2z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1c-1.2-.5-2.5-1.8-3-3l1-1-1-2z"/></svg></a>
+        <a class="social" href="mailto:edgar@esdm.com.mx" aria-label="Correo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
       </div>
     </div>
     <div class="reveal">
@@ -317,11 +347,35 @@
   </div>
 </section>
 
+<section id="trayectoria" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag reveal">// 03 — Trayectoria</div>
+        <h2 class="reveal">Compartiendo <em>conocimiento</em> en escenarios internacionales.</h2>
+      </div>
+      <p class="reveal">Expositor en FLISoL Brasil 2026, Convención de Software Libre en São Paulo, con la ponencia “Explosión de Software de Logística y Transporte”.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot reveal">
+        <span class="chip mono">● FLISoL Brasil 2026</span>
+        <img src="assets/conferencia-flisol-sala.jpg" alt="Ing. Edgar Rueda presentando ante el público en FLISoL Brasil 2026" width="1500" height="1000" loading="lazy">
+        <figcaption><b>Transformación digital con Software Libre</b>São Paulo Expo Center Norte · Brasil</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/conferencia-flisol.jpg" alt="Ing. Edgar Rueda, expositor de ESDM Consulting" width="1400" height="1050" loading="lazy">
+        <figcaption><b>Ing. Edgar Rueda · Expositor</b>ESDM Consulting · México</figcaption>
+      </figure>
+    </div>
+    <div class="topics reveal"><span>Gestión de flotas</span><span>Datos en tiempo real</span><span>Integración abierta</span><span>Automatización inteligente</span><span>Escalabilidad</span><span>Sostenibilidad</span></div>
+  </div>
+</section>
+
 <section id="metodo">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="tag reveal">// 03 — Método</div>
+        <div class="tag reveal">// 04 — Método</div>
         <h2 class="reveal">De la idea al <em>resultado</em>, sin rodeos.</h2>
       </div>
       <p class="reveal">Un proceso claro y medible, para que sepas en todo momento qué se está haciendo y por qué.</p>
@@ -341,6 +395,15 @@
     <blockquote class="reveal">“Lo más importante de la tecnología son las <em>personas</em> a las que les cambia la vida.”</blockquote>
     <cite class="reveal">— Edgar Roberto Rueda</cite>
   </div>
+</div>
+
+<div class="wrap" style="padding-bottom:110px">
+  <a href="https://wa.me/525646044792" target="_blank" rel="noopener" class="brand reveal" style="display:block" aria-label="ESDM — Tu consultor TI de confianza. Hablemos por WhatsApp">
+    <picture>
+      <source media="(max-width:600px)" srcset="assets/esdm-cuadrado.jpg">
+      <img src="assets/esdm-banner.jpg" alt="ESDM — Tu Consultor TI de Confianza. Tú lo sueñas, nosotros lo desarrollamos" width="1800" height="669" loading="lazy">
+    </picture>
+  </a>
 </div>
 
 <section id="contacto" style="padding-top:0">
@@ -365,7 +428,15 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
             <div><small>Correo</small><strong>edgar@esdm.com.mx</strong></div>
           </a>
-          <a class="channel" href="https://instagram.com/consultoredgarueda" target="_blank" rel="noopener">
+          <a class="channel" href="https://www.linkedin.com/in/edgar-roberto-rueda-salgado-7658861b0/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+            <div><small>LinkedIn</small><strong>Edgar Roberto Rueda Salgado</strong></div>
+          </a>
+          <a class="channel" href="https://www.facebook.com/profile.php?id=61566175991231" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+            <div><small>Facebook</small><strong>Consultor Tecnológico</strong></div>
+          </a>
+          <a class="channel" href="https://www.instagram.com/consultoredgarueda/" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
             <div><small>Instagram</small><strong>@consultoredgarueda</strong></div>
           </a>
@@ -382,7 +453,7 @@
 <footer>
   <div class="wrap foot">
     <span>© <span id="yr"></span> Edgar Roberto Rueda · Consultores Tecnológicos · ESDM</span>
-    <span class="mono">edgarr.com.mx</span>
+    <span class="mono">“Tú lo sueñas, nosotros lo desarrollamos” · edgarr.com.mx</span>
   </div>
 </footer>
 
